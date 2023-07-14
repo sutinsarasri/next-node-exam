@@ -1,0 +1,52 @@
+@base_url = http://localhost:3000
+@psts_api = {{base_url}}
+
+### Get test
+GET {{base_url}}/api/hello HTTP/1.1
+
+### post data
+POST {{base_url}}/api/signin HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password": "1234"
+}
+
+### put data
+PUT http://localhost:3000/school/update/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Roger Smith"
+}
+
+
+### patch data
+PATCH http://localhost:3000/school/update/2 HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": 888,
+    "name": "Frederick Mills"
+}
+
+### delete data
+DELETE http://localhost:3000/school/delete/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "cfID":1
+}
+
+### register
+POST {{base_url}}/register HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+username=sutin&password=1234
+
+### login
+POST {{base_url}}/login HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+username=sutin&password=1234

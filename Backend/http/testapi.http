@@ -1,0 +1,14 @@
+@base_url = http://localhost:8808
+@psts_api = {{base_url}}
+
+### Get test
+GET {{base_url}} HTTP/1.1
+
+### post data
+POST {{base_url}}/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password": "1234asdf"
+}
